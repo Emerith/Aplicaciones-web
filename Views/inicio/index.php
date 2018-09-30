@@ -6,27 +6,22 @@
 
 <div class="container">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Página de inicio</a>
+            <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Próximamente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <input class="form-control" type="search" placeholder="Buscar">
                     </li>
                 </ul>
             </div>
@@ -42,9 +37,9 @@
 
                 <h1 class="my-4">Eventos</h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Civicos</a>
-                    <a href="#" class="list-group-item">Depotivos</a>
-                    <a href="#" class="list-group-item">Culturales</a>
+                    <a href="#" class="list-group-item text-dark">Cívicos</a>
+                    <a href="#" class="list-group-item text-dark">Depotivos</a>
+                    <a href="#" class="list-group-item text-dark">Culturales</a>
                 </div>
 
             </div>
@@ -57,6 +52,7 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
@@ -67,6 +63,9 @@
                         </div>
                         <div class="carousel-item">
                             <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Fourth slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -86,13 +85,10 @@
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item One</a>
+                                    <a href="#">Evento</a>
                                 </h4>
-                                <h5>$24.99</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                <h5>fecha</h5>
+                                <p class="card-text">Descripción</p>
                             </div>
                         </div>
                     </div>
@@ -102,13 +98,10 @@
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Two</a>
+                                    <a href="#">Evento</a>
                                 </h4>
-                                <h5>$24.99</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                <h5>fecha</h5>
+                                <p class="card-text">Descripcion</p>
                             </div>
                         </div>
                     </div>
@@ -118,13 +111,10 @@
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Three</a>
+                                    <a href="#">Evento</a>
                                 </h4>
-                                <h5>$24.99</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                <h5>Fecha</h5>
+                                <p class="card-text">Descripción</p>
                             </div>
                         </div>
                     </div>
@@ -134,13 +124,10 @@
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Four</a>
+                                    <a href="#">Evento</a>
                                 </h4>
-                                <h5>$24.99</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                <h5>Fecha</h5>
+                                <p class="card-text">Descripción</p>
                             </div>
                         </div>
                     </div>
@@ -150,13 +137,10 @@
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Five</a>
+                                    <a href="#">Evento</a>
                                 </h4>
-                                <h5>$24.99</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                <h5>fecha</h5>
+                                <p class="card-text">Descripción</p>
                             </div>
                         </div>
                     </div>
@@ -166,13 +150,10 @@
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Item Six</a>
+                                    <a href="#">Evento</a>
                                 </h4>
-                                <h5>$24.99</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                <h5>Fecha</h5>
+                                <p class="card-text">Descripción</p>
                             </div>
                         </div>
                     </div>
@@ -190,9 +171,11 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-success">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+            <p class="m-0 text-left text-white">Dirección: Km 30 de la Carretera Federal Monumento - Valle de Bravo, Ejido de San Antonio de la Laguna, Valle de Bravo </p>
+            <p class="m-0 text-left text-white">Tel: 01 726 266 50 77</p>
+            <p class="m-0 text-left text-white">E-mail: direcciontesvalle@gmail.com</p>
         </div>
         <!-- /.container -->
     </footer>

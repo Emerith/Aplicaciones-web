@@ -28,16 +28,17 @@ class loginController
 
             if(isset($_POST)) {
                 $this->login->set("email", $_POST["email"]);
-                $this->login->set("pass", $_POST["password"]);
+                $this->login->set("pass", $_POST["pass"]);
                 $datos = $this->login->verify();
                 if (mysqli_num_rows($datos) > 0) {
                     $datos=mysqli_fetch_assoc($datos);
                     $_SESSION["username"]=$datos["email"];
+                    header("Location:" . URL . "Empleado_bienvenido");
 
                 }
                 else {
                     $_SESSION["error_login"] = "los datos no coinciden con nuestros registros";
-                  header("Location:" . URL . "login");
+                    header("Location:" . URL . "login");
                 }
             }
         }

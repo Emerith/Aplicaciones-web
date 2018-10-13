@@ -1,9 +1,6 @@
 <?php
 namespace Views;
-
-
 use http\Url;
-
 class Template
 {
     public static function header()
@@ -56,21 +53,9 @@ class Template
                 <?php }?>
             </nav>
 
-        <?php
-
-        if (isset($_SESSION["username"]))
-
-        {
-        ?>
-
-        <?php
-        }
-        ?>
-
 
         <?php
     }
-
     public static function footer()
     {
         ?>

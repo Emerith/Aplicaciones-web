@@ -1,38 +1,82 @@
-<div class="row">
-    <div class="col l8 offset-l2 m12 s12">
-        <div class=" col s3 ">
-            <input type="text" class="datepickerFI " id="id_inicio" placeholder="Proximamente"  >
-        </div>
-        <div class="col s3">
-            <input type="text" class="datepicker" id="id_final" placeholder="Fecha Final" >
-        </div>
-        <div class="col s2">
-            <input type="number" min="1" max="20" class="adultos" placeholder="Adultos"  id="comboadultos">
+<!-- Page Content -->
+<div class="container">
 
+    <!-- Heading Row -->
+    <div class="row my-4">
+        <div class="col-lg-8">
+            <img class="img-fluid rounded" src="http://placehold.it/900x400" alt="">
         </div>
-        <div class="col s2">
-            <input type="number" min="0" max="20" class="niños" placeholder="Niños"  id="comboniños">
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-4">
+            <h1>Evento mas cercano</h1>
+            <p>Información</p>
+            <p>Fecha</p>
+            <p>Hora</p>
+            <p>Lugar</p>
         </div>
-        <div class="input-field col s2">
-            <a id="buscar" class="btn modal-close cyan lighten-2 black-text" data-id="" href="#!">Buscar</a>
-        </div>
+        <!-- /.col-md-4 -->
     </div>
-    <div class="col l8 offset-l2 m12 s12">
-        <div class="col s2.7"  id="divnumerodias" style="display: none">
-            <h5 class="text-primary black-text" >Dias de Reservacion:</h5>
-        </div>
-        <div class="col s6">
-            <h5 id="id_numerodias"></h5>
-        </div>
-    </div>
-</div>
+    <!-- /.row -->
 
-<div class="row" id="id_tipo">
-    <div class="col l8 offset-l2 m12 s12">
-        <form id="muestra">
-                <?php
-                require_once ("tabla.php");
-                ?>
-        </form>
+    <!-- Call to Action Well -->
+    <div class="bg-info my-4">
+        <div class="card-body">
+        </div>
     </div>
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Evento 1</h2>
+                    <p>Información</p>
+                    <p>Fecha</p>
+                    <p>Hora</p>
+                    <p>Lugar</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Evento 2</h2>
+                    <p>Información</p>
+                    <p>Fecha</p>
+                    <p>Hora</p>
+                    <p>Lugar</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Evento 3</h2>
+                    <p>Información</p>
+                    <p>Fecha</p>
+                    <p>Hora</p>
+                    <p>Lugar</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Evento 4</h2>
+                    <p>Información</p>
+                    <p>Fecha</p>
+                    <p>Hora</p>
+                    <p>Lugar</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
 </div>
+<!-- /.container -->

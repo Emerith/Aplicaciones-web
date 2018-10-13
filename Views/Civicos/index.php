@@ -1,38 +1,101 @@
-<div class="row">
-    <div class="col l8 offset-l2 m12 s12">
-        <div class=" col s3 ">
-            <input type="text" class="datepickerFI " id="id_inicio" placeholder="Fecha Inicio"  >
-        </div>
-        <div class="col s3">
-            <input type="text" class="datepicker" id="id_final" placeholder="Fecha Final" >
-        </div>
-        <div class="col s2">
-            <input type="number" min="1" max="20" class="adultos" placeholder="Adultos"  id="comboadultos">
+<div class="container">
 
-        </div>
-        <div class="col s2">
-            <input type="number" min="0" max="20" class="niños" placeholder="Niños"  id="comboniños">
-        </div>
-        <div class="input-field col s2">
-            <a id="buscar" class="btn modal-close cyan lighten-2 black-text" data-id="" href="#!">Buscar</a>
-        </div>
-    </div>
-    <div class="col l8 offset-l2 m12 s12">
-        <div class="col s2.7"  id="divnumerodias" style="display: none">
-            <h5 class="text-primary black-text" >Dias de Reservacion:</h5>
-        </div>
-        <div class="col s6">
-            <h5 id="id_numerodias"></h5>
-        </div>
-    </div>
-</div>
+    <!-- Page Heading -->
+    <h1 class="my-4">Cívicos
+    </h1>
 
-<div class="row" id="id_tipo">
-    <div class="col l8 offset-l2 m12 s12">
-        <form id="muestra">
-            <?php
-            require_once ("tabla.php");
-            ?>
-        </form>
+    <!-- Project One -->
+    <div class="row">
+        <div class="col-md-7">
+            <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>Evento 1</h3>
+            <p>Información</p>
+            <p>Horarios</p>
+            <p>Fecha</p>
+            <p>Lugar</p>
+        </div>
     </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Two -->
+    <div class="row">
+        <div class="col-md-7">
+            <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>Evento 2</h3>
+            <p>Información</p>
+            <p>Horarios</p>
+            <p>Fecha</p>
+            <p>Lugar</p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Three -->
+    <div class="row">
+        <div class="col-md-7">
+            <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>Evento 3</h3>
+            <p>Información</p>
+            <p>Horarios</p>
+            <p>Fecha</p>
+            <p>Lugar</p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Four -->
+    <div class="row">
+
+        <div class="col-md-7">
+            <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>Evento 4</h3>
+            <p>Información</p>
+            <p>Horarios</p>
+            <p>Fecha</p>
+            <p>Lugar</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+        <div class="col-md-7">
+            <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>Evento 5</h3>
+            <p>Información</p>
+            <p>Horarios</p>
+            <p>Fecha</p>
+            <p>Lugar</p>
+        </div>
+    </div>
+
+    <hr>
+
 </div>

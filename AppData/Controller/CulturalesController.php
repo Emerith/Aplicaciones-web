@@ -3,13 +3,13 @@
 namespace AppData\Controller;
 
 
-class ProximamenteController
+class CulturalesController
 {
     private $eventos;
 
     public function __construct()
     {
-        $this->eventos= new \AppData\Model\Proximamente();
+        $this->eventos= new \AppData\Model\Culturales();
     }
 
     public function index()

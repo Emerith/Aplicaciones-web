@@ -39,7 +39,7 @@ class Request
                 $this->controlador = "empleado_bienvenido";
                 $this->metodo = "index";
             }
-      }
+        }
       else
           if (isset($_GET['url'])?stristr($_GET['url'],'login'):false)
         {
@@ -53,31 +53,33 @@ class Request
             else
                 $this->metodo = "index";
         }
-        else if (isset($_GET['url'])?stristr($_GET['url'],'Proximamente'):false)
+        else if (isset($_GET['url'])?stristr($_GET['url'],'Civicos'):false)
         {
-            $this->controlador="Proximamente";
-
+            $this->controlador="Civicos";
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 
         else if (isset($_GET['url'])?stristr($_GET['url'],'Deportivos'):false)
         {
             $this->controlador="Deportivos";
-
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 
         else if (isset($_GET['url'])?stristr($_GET['url'],'Culturales'):false)
         {
             $this->controlador="Culturales";
-
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 
-        else if (isset($_GET['url'])?stristr($_GET['url'],'Civicos'):false)
+        else if (isset($_GET['url'])?stristr($_GET['url'],'Proximamente'):false)
         {
-            $this->controlador="Civicos";
+            $this->controlador="Proximamente";
+            $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
+        }
 
+        else if (isset($_GET['url'])?stristr($_GET['url'],'Formato'):false)
+        {
+            $this->controlador="Formato";
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 

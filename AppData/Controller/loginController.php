@@ -28,7 +28,7 @@ class loginController
 
             if(isset($_POST)) {
                 $this->login->set("email", $_POST["email"]);
-                $this->login->set("pass", $_POST["pass"]);
+                $this->login->set("pass", $_POST["password"]);
                 $datos = $this->login->verify();
                 if (mysqli_num_rows($datos) > 0) {
                     $datos=mysqli_fetch_assoc($datos);

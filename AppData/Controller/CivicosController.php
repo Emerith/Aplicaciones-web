@@ -1,20 +1,18 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Mutsorini
+ * Date: 16/10/2018
+ * Time: 07:03 PM
+ */
 
 namespace AppData\Controller;
 
 
 class CivicosController
 {
-    private $eventos;
-
-    public function __construct()
-    {
-        $this->eventos= new \AppData\Model\Civicos();
-    }
-
     public function index()
     {
 
     }
-
 }

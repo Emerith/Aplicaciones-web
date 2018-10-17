@@ -44,8 +44,5 @@
     font-size: 14px;
     margin: auto;
 }
-.login-form .btn.btn-primary.reset {
-    background: #ff9900 none repeat scroll 0 0;
-}
 .back { text-align: left; margin-top:10px;}
 .back a {color: #444444; font-size: 13px;text-decoration: none;}

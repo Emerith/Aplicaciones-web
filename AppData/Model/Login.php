@@ -11,7 +11,7 @@ namespace AppData\Model;
 
 class Login
 {
-    private $tabla="usuarios";
+    private $tabla="persona";
     private $email, $pass;
     public function __construct()
     {

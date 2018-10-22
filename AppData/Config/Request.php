@@ -83,6 +83,7 @@ class Request
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 
+
         else
         {
             $this->controlador="inicio";

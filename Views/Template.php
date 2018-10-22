@@ -18,8 +18,9 @@ class Template
 
             <!-- Custom styles for this template -->
             <link type="text/css" href="<?php echo URL?>Public/css/shop-homepage.css" rel="stylesheet">
-           <link type="text/css" href="<?php echo URL?>Public/css/empleado.css" rel="stylesheet">
+            <link type="text/css" href="<?php echo URL?>Public/css/empleado.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/login.css" rel="stylesheet">
+           <link type="text/css" href="<?php echo URL?>Public/css/formato.css" rel="stylesheet">
 
             <!-- Bootstrap core JavaScript -->
             <script type="text/javascript" src="<?php echo URL?>Public/jquery/jquery.min.js"></script>

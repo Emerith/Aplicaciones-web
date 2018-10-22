@@ -1,0 +1,58 @@
+
+#footer_color{
+    background: #f6f2cc 20%; /* Old browsers */
+    background: -moz-linear-gradient(top, #432523 0%,#6f162c 45%,#d97a36 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #432523 0%, #6f162c 45%,#d97a36 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,#432523 0%,#6f162c 45%,#d97a36 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=0 ); /* IE6-9 */
+}
+
+#barra_arriba {
+    background: #f6f2cc; /* Old browsers */
+    background: -moz-linear-gradient(top, #f6f2cc 0%, #d97a36 44%, #6f162c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f6f2cc 0%,#d97a36 44%,#6f162c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f6f2cc 0%,#d97a36 44%,#6f162c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+}
+
+#foot_copy{
+    background: rgb(107,3,8); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(107,3,8,1) 0%, rgba(76,2,7,1) 50%, rgba(66,2,6,1) 51%, rgba(83,1,7,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(107,3,8,1) 0%,rgba(76,2,7,1) 50%,rgba(66,2,6,1) 51%,rgba(83,1,7,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(107,3,8,1) 0%,rgba(76,2,7,1) 50%,rgba(66,2,6,1) 51%,rgba(83,1,7,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b0308', endColorstr='#530107',GradientType=0 );
+}
+
+.modal_s {
+    display: none;
+    position: center;
+    background-color: #fafafa;
+    max-height: 100%;
+    width: 55%;
+    max-width: 100%;
+    height: 84%;
+    border-radius: 20px;
+    will-change: opacity;
+}
+.modal_c {
+    display: none;
+    position: center;
+    background-color: #fafafa;
+    max-height: 100%;
+    width: 88%;
+    max-width: 100%;
+    height: 84%;
+    border-radius: 20px;
+    will-change: opacity;
+}
+.modal_v{
+    display: none;
+    position: center;
+    background-color: #fafafa;
+    max-height: 100%;
+    width: 98%;
+    max-width: 100%;
+    height: 88%;
+    border-radius: 20px;
+    will-change: opacity;
+}

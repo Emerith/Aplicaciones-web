@@ -1,22 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mutsorini
- * Date: 16/10/2018
- * Time: 07:32 PM
- */
+
 
 namespace AppData\Model;
 
 
 class Formato
 {
-    private $tabla = "persona";
+    private $tabla = "prueba";
     private $Nombre;
-    private $Apellido_patern;
-    private $Apellido_matern;
-    private $email;
-    private $pass;
 
     function __construct()
     {
@@ -35,9 +26,24 @@ class Formato
 
     function add()
     {
-        $sql = "insert into {$this->tabla} values('0','{$this->Nombre}',
-         '{$this->Apellido_patern}','{$this->Apellido_matern}','{$this->email}','{$this->pass}')";
+        $sql = "insert into {$this->tabla} values('0','{$this->Nombre}')";
         $this->conexion->QuerySimple($sql);
     }
+
+    function getOne($id)
+    {
+        $sql = "select * from  {$this->tabla} where id_persona='{$id}'";
+        $datos = $this->conexion->QueryResultado($sql);
+        return $datos;
+    }
+
+
+    function verify()
+    {
+        $sql = "select * from {$this->tabla} where email='{$this->email}'";
+        $dato = $this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+
 
 }

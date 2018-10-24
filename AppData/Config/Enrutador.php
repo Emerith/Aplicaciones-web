@@ -26,10 +26,11 @@ class Enrutador
             if (!isset($argumento)) {
                 $datos = call_user_func(array($controlador, $metodo));
             } else {
-                $datos = call_user_func(array($controlador, $metodo), $argumento);
+                if(is_callable(array($controlador,$metodo)))
+                    $datos = call_user_func(array($controlador, $metodo), $argumento);
             }
         }
-
+        $ruta = ROOT . "Views" . DS . $request->getControlador() . DS . $request->getMetodo() . ".php";
         if ($request->getMetodo() != "modificar") {
             $ruta = ROOT . "Views" . DS . $request->getControlador() . DS . $request->getMetodo() . ".php";
 

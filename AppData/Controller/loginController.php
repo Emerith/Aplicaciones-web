@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Luis
- * Date: 12/06/2018
- * Time: 01:40 PM
- */
 
 namespace AppData\Controller;
 
@@ -34,10 +28,10 @@ class loginController
                     $datos=mysqli_fetch_assoc($datos);
                     $_SESSION["username"]=$datos["email"];
                     header("Location:" . URL . "Empleado_bienvenido");
-
                 }
                 else {
                     $_SESSION["error_login"] = "los datos no coinciden con nuestros registros";
+
                     header("Location:" . URL . "login");
                 }
             }
@@ -47,4 +41,7 @@ class loginController
             session_destroy();
            // header("Location:".URL);
         }
+
 }
+
+

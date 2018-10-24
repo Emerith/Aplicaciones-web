@@ -20,11 +20,14 @@ class Template
             <link type="text/css" href="<?php echo URL?>Public/css/shop-homepage.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/empleado.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/login.css" rel="stylesheet">
-           <link type="text/css" href="<?php echo URL?>Public/css/formato.css" rel="stylesheet">
+            <link type="text/css" href="<?php echo URL?>Public/css/formato.css" rel="stylesheet">
+            <link type="text/css" href="<?php echo URL?>Public/css/sweetalert.css" rel="stylesheet">
 
             <!-- Bootstrap core JavaScript -->
-            <script type="text/javascript" src="<?php echo URL?>Public/jquery/jquery.min.js"></script>
-            <script type="text/javascript" src="<?php echo URL?>Public/js/bootstrap.bundle.min.js"></script>
+           <script type="text/javascript" src="<?php echo URL?>Public/js/jquery-1.11.2.min.js"></script>
+           <script type="text/javascript" src="<?php echo URL?>Public/js/bootstrap.js"></script>
+           <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
+           <script type="text/javascript" src="<?php echo URL?>Public/js/sweetalert.min.js"></script>
 
         </head>
 

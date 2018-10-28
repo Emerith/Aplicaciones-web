@@ -6,8 +6,13 @@ namespace AppData\Model;
 
 class Formato
 {
-    private $tabla = "prueba";
+    private $tabla = "persona";
     private $Nombre;
+    private $Apellido_patern;
+    private $Apellido_matern;
+    private $email;
+    private $pass;
+
 
     function __construct()
     {
@@ -26,24 +31,9 @@ class Formato
 
     function add()
     {
-        $sql = "insert into {$this->tabla} values('0','{$this->Nombre}')";
+        $sql = "insert into {$this->tabla} values('0','{$this->Nombre}','{$this->Apellido_patern}','{$this->Apellido_matern}'
+               ,'{$this->email}','{$this->pass}')";
         $this->conexion->QuerySimple($sql);
     }
-
-    function getOne($id)
-    {
-        $sql = "select * from  {$this->tabla} where id_persona='{$id}'";
-        $datos = $this->conexion->QueryResultado($sql);
-        return $datos;
-    }
-
-
-    function verify()
-    {
-        $sql = "select * from {$this->tabla} where email='{$this->email}'";
-        $dato = $this->conexion->QueryResultado($sql);
-        return $dato;
-    }
-
 
 }

@@ -5,11 +5,11 @@ namespace AppData\Controller;
 
 class FormatoController
 {
-    private $prueba;
+    private $persona;
 
     public function __construct()
     {
-        $this->prueba= new \AppData\Model\Formato();
+        $this->persona= new \AppData\Model\Formato();
 
     }
 
@@ -20,13 +20,17 @@ class FormatoController
     public function crear(){
         if($_POST)
         {
-            $this->prueba->set('Nombre',$_POST["Nombre"]);
+            $this->persona->set('Nombre',$_POST["Nombre"]);
+            $this->persona->set('Apellido_patern',$_POST["Apellido_patern"]);
+            $this->persona->set('Apellido_matern',$_POST["Apellido_matern"]);
+            $this->persona->set('email',$_POST["email"]);
+            $this->persona->set('pass',$_POST["pass"]);
 
-
-            $this->prueba->add();
-            $datos1=$this->prueba->getAll();
+            $this->persona->add();
+            $datos1=$this->persona->getAll();
             $datos[0]=$datos1;
             return $datos;
         }
     }
+
 }

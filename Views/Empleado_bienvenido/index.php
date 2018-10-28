@@ -5,6 +5,7 @@
     <h1 class="my-4" align="center">Bienvenido
     </h1>
     <div class="row">
+        <button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#agregar">+</button>
         <div class="col-lg-12">
             <h4 class="my-4" >Control de Eventos</h4>
         </div>
@@ -290,4 +291,69 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="modal fade" id="agregar" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Empleado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" id="save_emp">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Nombre</label>
+                        <input type="text" class="form-control" id='Nombre' name="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Apellido Paterno</label>
+                        <input type="text" class="form-control" id='Apellido_patern' name="Apellido_patern">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Apellido Materno</label>
+                        <input type="text" class="form-control" id='Apellido_matern' name="Apellido_matern">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Correo</label>
+                        <input type="email" class="form-control" id='email' name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Contaseña</label>
+                        <input type="password" class="form-control" id='pass' name="pass">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" href="#!" id="save_emp_ok" >Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#save_emp_ok").click(function() {
+            $("#save_emp").submit();
+
+            document.getElementById('save_emp_ok').click = function(){
+                swal("Registro exitoso");
+            };
+        });
+
+        $("#save_emp").validate({
+            submitHandler:function(form){
+                $.post("<?php echo URL?>Formato/crear",$("#save_emp").serialize(),function(res){
+                    $('#save_emp').find('input, select, textarea').val('');
+                })
+            }
+
+        });
+
+    });
+</script>
 

@@ -24,10 +24,6 @@
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary" name='btn_login'>Login</button>
                     </div>
-
-                    <div class="form-group">
-                        <a href="<?php echo URL?>Formato" class="btn btn-primary">Registrarse</a>
-                    </div>
                 </form>
             </div>
         </div>

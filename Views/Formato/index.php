@@ -1,29 +1,30 @@
-<div class="registro">
-    <form id="contact" method="post"  href="<?php echo URL?>Formato/crear/">
-        <h3 align="center">Registro</h3>
-        <fieldset>
-            <input placeholder="Nombre" type="text" name='Nombre' id="Nombre" >
-        </fieldset>
+<div class="row">
+    <div class="card-panel">
+        <form action="" id="save_estadohabitacion">
+            <fieldset>
+                <input placeholder="Nombre" type="text" name='Nombre' id="Nombre" >
+            </fieldset>
 
-        <fieldset>
-        <input placeholder="Apellido paterno" type="text" name='Apellido_patern' id="Apellido_patern">
-        </fieldset>
-
-        <fieldset>
-            <input placeholder="Apellido materno" type="text" name='Apellido_matern' id="Apellido_matern">
-        </fieldset>
-
-        <fieldset>
-            <input placeholder="Email" type="email" name='email' id="email">
-        </fieldset>
-
-        <fieldset>
-            <input placeholder="Contraseña" type="password" name='pass' id="pass">
-        </fieldset>
-        <fieldset >
-            <button  type="submit" id="b1">Enviar</button>
-        </fieldset>
-
-    </form>
-
+            <fieldset>
+                <a href="#!" id="save_estadohabitacion_ok" class="btn cyan lighten-2 black-text">Registrar</a>
+            </fieldset>
+        </form>
+    </div>
 </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#save_estadohabitacion_ok").click(function() {
+            $("#save_estadohabitacion").submit();
+        });
+
+        $("#save_estadohabitacion").validate({
+            submitHandler:function(form){
+                $.post("<?php echo URL?>Formato/crear",$("#save_estadohabitacion").serialize(),function(res){
+
+                })
+            }
+        });
+    });
+</script>

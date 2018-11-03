@@ -21,6 +21,9 @@ class Template
             <link type="text/css" href="<?php echo URL?>Public/css/style3.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/formato.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/sweetalert.css" rel="stylesheet">
+            <link type="text/css" href="<?php echo URL?>Public/css/boostrap.css" rel="stylesheet">
+            <link type="text/css" href="<?php echo URL?>Public/css/glyphicons.css" rel="stylesheet">
+
 
             <!-- Bootstrap core JavaScript -->
             <script type="text/javascript" src="<?php echo URL?>Public/js/jquery-1.11.2.min.js"></script>
@@ -72,33 +75,34 @@ class Template
                         </li>
                     </ul>
                 </nav>
+
+                <div id="wrapper">
+                    <div id="sidebar-wrapper" >
+                        <ul class="sidebar-nav">
+
+                            <li class="sidebar-brand">
+                                <a href="<?php echo URL?>Empleado_bienvenido">Inicio</a>
+                            </li>
+
+                            <li>
+                               <a href="<?php echo URL?>Culturales">Culturales</a>
+                            </li>
+
+                            <li>
+                                <a href="<?php echo URL?>Civicos">Civicos</a>
+                            </li>
+
+                            <li>
+                              <a href="<?php echo URL?>Deportivos">Deportivos</a>
+                            </li>
+
+                            <li>
+                               <a href="<?php echo URL?>login/logout">Salir</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </main>
-
-            <div id="wrapper">
-            <div id="sidebar-wrapper" >
-                <ul class="sidebar-nav">
-
-                    <li class="sidebar-brand">
-                        <a href="<?php echo URL?>Empleado_bienvenido">Inicio</a>
-                    </li>
-
-                    <li>
-                       <a href="<?php echo URL?>Culturales">Culturales</a>
-                    </li>
-
-                    <li>
-                        <a href="<?php echo URL?>Civicos">Civicos</a>
-                    </li>
-
-                    <li>
-                      <a href="<?php echo URL?>Deportivos">Deportivos</a>
-                    </li>
-
-                    <li>
-                       <a href="<?php echo URL?>login/logout">Salir</a>
-                    </li>
-                </ul>
-            </div>
 
            <script>
                 $("#menu-toggle").click(function(e) {

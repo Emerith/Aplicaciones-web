@@ -20,6 +20,7 @@ class Civicos
     private $fecha;
     private $Fecha_fin;
     private $Horario;
+    private $id_categoria;
 
     function __construct()
     {
@@ -45,7 +46,7 @@ class Civicos
 
     function getAll()
     {
-        $sql = "select *from {$this->tabla}";
+        $sql = "select *from {$this->tabla} where id_categoria='230'";
         $datos = $this->conexion->queryResultado($sql);
         return $datos;
     }

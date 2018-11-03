@@ -39,7 +39,7 @@ class Deportivos
         $this->conexion->QuerySimple($sql);
     }
     function getAll(){
-        $sql="select *from {$this->tabla}";
+        $sql="select *from {$this->tabla}  where id_categoria='232'";
         $datos=$this->conexion->queryResultado($sql);
         return $datos;
     }

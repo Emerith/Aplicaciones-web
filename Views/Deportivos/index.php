@@ -74,6 +74,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" href="#!" id="save_dep_ok" data-dismiss="modal">Registrar</button>
                 <button type="button" class="btn btn-success" href="#!" id="update_dep_ok" data-dismiss="modal">Actualizar</button>
+                <script type="text/javascript">$("#update_dep_ok").hide();</script>
             </div>
         </div>
     </div>

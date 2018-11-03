@@ -70,6 +70,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" href="#!" id="save_emp_ok" data-dismiss="modal">Registrar</button>
                 <button type="button" class="btn btn-success" href="#!" id="update_emp_ok" data-dismiss="modal">Actualizar</button>
+                <script type="text/javascript">$("#update_emp_ok").hide();</script>
             </div>
         </div>
     </div>

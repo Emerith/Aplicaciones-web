@@ -73,7 +73,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" href="#!" id="save_cult_ok" data-dismiss="modal">Registrar</button>
-                <button type="button" class="btn btn-success" href="#!" id="update_cult_ok" data-dismiss="modal">Actualizar</button>
+
+                <button type="button" class="btn btn-success" href="#!" id="update_cult_ok" data-dismiss="modal">
+                    Actualizar
+                    <script type="text/javascript">$("#update_cult_ok").hide();</script>
+                </button>
             </div>
         </div>
     </div>
@@ -153,3 +157,4 @@
 
     });
 </script>
+

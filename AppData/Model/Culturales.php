@@ -14,6 +14,7 @@ class Culturales
     private  $fecha;
     private  $Fecha_fin;
     private  $Horario;
+    private  $id_categoria;
 
     function __construct()
     {
@@ -34,7 +35,7 @@ class Culturales
         $this->conexion->QuerySimple($sql);
     }
     function getAll(){
-        $sql="select *from {$this->tabla}";
+        $sql="select *from {$this->tabla} where id_categoria='231'";
         $datos=$this->conexion->queryResultado($sql);
         return $datos;
     }

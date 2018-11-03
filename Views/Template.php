@@ -1,16 +1,14 @@
 <?php
-
 namespace Views;
 use http\Url;
-
 class Template
 {
     public static function header()
     {
-       ?>
+        ?>
         <!DOCTYPE html>
         <html>
-       <head>
+        <head>
 
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <!-- Bootstrap core CSS -->
@@ -20,14 +18,15 @@ class Template
             <link type="text/css" href="<?php echo URL?>Public/css/shop-homepage.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/empleado.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/login.css" rel="stylesheet">
+            <link type="text/css" href="<?php echo URL?>Public/css/style3.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/formato.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/sweetalert.css" rel="stylesheet">
 
             <!-- Bootstrap core JavaScript -->
-           <script type="text/javascript" src="<?php echo URL?>Public/js/jquery-1.11.2.min.js"></script>
-           <script type="text/javascript" src="<?php echo URL?>Public/js/bootstrap.js"></script>
-           <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
-           <script type="text/javascript" src="<?php echo URL?>Public/js/sweetalert.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL?>Public/js/jquery-1.11.2.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL?>Public/js/bootstrap.js"></script>
+            <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL?>Public/js/sweetalert.min.js"></script>
 
         </head>
 
@@ -37,56 +36,83 @@ class Template
         <nav id="menusito">
             <?php if(!isset($_SESSION["username"]))
             {?>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-                <div class="container">
-                    <a class="navbar-brand" href="#"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo URL?>inicio">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo URL?>Proximamente">Próximamente</a>
-                            </li>
-                            <li class="nav-item">
-                                <input class="form-control" type="search" placeholder="Buscar">
-                            </li>
-                        </ul>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo URL?>inicio">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo URL?>Proximamente">Próximamente</a>
+                                </li>
+                                <li class="nav-item">
+                                    <input class="form-control" type="search" placeholder="Buscar">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-                <?php }?>
-            </nav>
+                </nav>
+            <?php }?>
+        </nav>
+
         <?php
-
         if (isset($_SESSION["username"]))
-
         {
-        ?>
+            ?>
             <main>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-                <ul class="navbar-nav px-3">
-                    <li class="nav-item text-nowrap">
-                        <a class="nav-link" href="<?php echo URL?>login/logout">Salir</a>
-                    </li>
-                </ul>
-            </nav>
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item text-nowrap">
+                            <a class="nav-link" href="#menu-toggle" id="menu-toggle">Menu</a>
+                        </li>
+                    </ul>
+                </nav>
             </main>
 
+            <div id="wrapper">
+            <div id="sidebar-wrapper" >
+                <ul class="sidebar-nav">
 
-        <!--Import jQuery before materialize.js-->
+                    <li class="sidebar-brand">
+                        <a href="<?php echo URL?>Empleado_bienvenido">Inicio</a>
+                    </li>
 
-        <?php
-        }
-        ?>
+                    <li>
+                       <a href="<?php echo URL?>Culturales">Culturales</a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo URL?>Civicos">Civicos</a>
+                    </li>
+
+                    <li>
+                      <a href="<?php echo URL?>Deportivos">Deportivos</a>
+                    </li>
+
+                    <li>
+                       <a href="<?php echo URL?>login/logout">Salir</a>
+                    </li>
+                </ul>
+            </div>
+
+           <script>
+                $("#menu-toggle").click(function(e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("toggled");
+                });
+            </script>
+
+     <?php
+    }?>
 
 
-        <?php
+    <?php
     }
-
     public static function footer()
     {
         ?>

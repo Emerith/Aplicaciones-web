@@ -8,9 +8,9 @@
                 <a href="<?php echo URL?>login">.</a>
             </h1>
             <div class="list-group">
-                <a href="<?php echo URL?>Civicos"  class="list-group-item text-dark">Cívicos</a>
-                <a href="<?php echo URL?>Deportivos" class="list-group-item text-dark">Depotivos</a>
-                <a href="<?php echo URL?>Culturales" class="list-group-item text-dark">Culturales</a>
+                <a href="<?php echo URL?>CivicosClient"  class="list-group-item text-dark">Cívicos</a>
+                <a href="<?php echo URL?>DeportivosClient" class="list-group-item text-dark">Depotivos</a>
+                <a href="<?php echo URL?>CulturalesClient" class="list-group-item text-dark">Culturales</a>
             </div>
 
         </div>

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JAZMIN
- * Date: 10/05/2018
- * Time: 12:56 PM
- */
 
 namespace AppData\Config;
 
@@ -39,7 +33,7 @@ class Request
                 $this->controlador = "empleado_bienvenido";
                 $this->metodo = "index";
             }
-        }
+      }
       else
           if (isset($_GET['url'])?stristr($_GET['url'],'login'):false)
         {
@@ -53,37 +47,33 @@ class Request
             else
                 $this->metodo = "index";
         }
-        else if (isset($_GET['url'])?stristr($_GET['url'],'Civicos'):false)
+        else if (isset($_GET['url'])?stristr($_GET['url'],'CivicosClient'):false)
         {
-            $this->controlador="Civicos";
+            $this->controlador="CivicosClient";
+
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 
-        else if (isset($_GET['url'])?stristr($_GET['url'],'Deportivos'):false)
+        else if (isset($_GET['url'])?stristr($_GET['url'],'CulturalesClient'):false)
         {
-            $this->controlador="Deportivos";
+            $this->controlador="CulturalesClient";
+
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 
-        else if (isset($_GET['url'])?stristr($_GET['url'],'Culturales'):false)
+        else if (isset($_GET['url'])?stristr($_GET['url'],'DeportivosClient'):false)
         {
-            $this->controlador="Culturales";
+            $this->controlador="DeportivosClient";
+
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
 
         else if (isset($_GET['url'])?stristr($_GET['url'],'Proximamente'):false)
         {
             $this->controlador="Proximamente";
+
             $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
         }
-
-        else if (isset($_GET['url'])?stristr($_GET['url'],'Formato'):false)
-        {
-            $this->controlador="Formato";
-            $this->metodo=stristr($_GET['url'],'consulta')?"consulta":"index";
-        }
-
-
         else
         {
             $this->controlador="inicio";

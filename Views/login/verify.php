@@ -1,5 +1,4 @@
 <script type="text/javascript">
-    document.getElementById('b1').onclick = function(){
-        swal("Here's a message!");
-    };
+    window.location.href = "<?php echo URL?>";
+    Materialize.toast("Bienvenido");
 </script>

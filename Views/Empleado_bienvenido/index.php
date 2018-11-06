@@ -17,7 +17,6 @@
                     <th scope="col">Apellido Paterno</th>
                     <th scope="col">Apellido Materno</th>
                     <th scope="col">Correo</th>
-                    <th scope="col">Contraseña</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
@@ -69,7 +68,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" href="#!" id="save_emp_ok" data-dismiss="modal">Registrar</button>
-                <button type="button" class="btn btn-success" href="#!" id="update_emp_ok" data-dismiss="modal">Actualizar</button>
+                <button type="button" class="btn btn-success" href="#!" id="update_emp_ok" data-dismiss="modal" >Actualizar</button>
                 <script type="text/javascript">$("#update_emp_ok").hide();</script>
             </div>
         </div>
@@ -87,24 +86,27 @@
                 </button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" href="#!" id="eliminar_ok" data-dismiss="modal" >Aceptar</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" href="#!">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="eliminar_ok" data-dismiss="modal" >
+                    Aceptar
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
 </div>
 
-
 <script type="text/javascript">
     $(document).ready(function(){
         $("#save_emp_ok").click(function() {
             $("#save_emp").submit();
-            swal("Registro Exitoso", " ", "success");
+            swal("Registro Exitoso")
+
         });
         $("#save_emp").validate({
             submitHandler:function(form){
                 $.post("<?php echo URL?>Empleado_bienvenido/crear",$("#save_emp").serialize(),function(res){
                     $('#save_emp').find('input, select, textarea').val('');
+                    window.location.href="<?php echo URL?>Empleado_bienvenido";
                 })
             }
         });
@@ -142,10 +144,10 @@
             $.post("<?php echo URL?>Empleado_bienvenido/actualizar/"+id,$("#save_emp").serialize(),function(res){
                 $('#save_emp').find('input, select, textarea').val('');
                 $("#body_table").empty().append(res);
-
-                swal("Actualización completa")
+                swal("Actualización completa", " ", "success");
             })
         });
 
     });
 </script>
+

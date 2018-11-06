@@ -103,12 +103,13 @@
     $(document).ready(function(){
         $("#save_dep_ok").click(function() {
             $("#save_dep").submit();
-            swal("Registro Exitoso", " ", "success");
+            swal("Registro Exitoso")
         });
         $("#save_dep").validate({
             submitHandler:function(form){
                 $.post("<?php echo URL?>Deportivos/crear",$("#save_dep").serialize(),function(res){
                     $('#save_dep').find('input, select, textarea').val('');
+                    window.location.href="<?php echo URL?>Deportivos";
                 })
             }
         });
@@ -148,7 +149,7 @@
                 $('#save_dep').find('input, select, textarea').val('');
                 $("#body_table").empty().append(res);
 
-                swal("Actualización completa")
+                swal("Actualización completa", " ", "success");
             })
         });
 

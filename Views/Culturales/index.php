@@ -106,12 +106,13 @@
     $(document).ready(function(){
         $("#save_cult_ok").click(function() {
             $("#save_cult").submit();
-            swal("Registro Exitoso", " ", "success");
+            swal("Registro Exitoso")
         });
         $("#save_cult").validate({
             submitHandler:function(form){
                 $.post("<?php echo URL?>Culturales/crear",$("#save_cult").serialize(),function(res){
                     $('#save_cult').find('input, select, textarea').val('');
+                    window.location.href="<?php echo URL?>Culturales";
                 })
             }
         });
@@ -151,7 +152,7 @@
                 $('#save_cult').find('input, select, textarea').val('');
                 $("#body_table").empty().append(res);
 
-                swal("Actualización completa")
+                swal("Actualización completa", " ", "success");
             })
         });
 

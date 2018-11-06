@@ -24,7 +24,6 @@ class Template
             <link type="text/css" href="<?php echo URL?>Public/css/boostrap.css" rel="stylesheet">
             <link type="text/css" href="<?php echo URL?>Public/css/glyphicons.css" rel="stylesheet">
 
-
             <!-- Bootstrap core JavaScript -->
             <script type="text/javascript" src="<?php echo URL?>Public/js/jquery-1.11.2.min.js"></script>
             <script type="text/javascript" src="<?php echo URL?>Public/js/bootstrap.js"></script>
@@ -71,7 +70,8 @@ class Template
                 <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
                     <ul class="navbar-nav px-3">
                         <li class="nav-item text-nowrap">
-                            <a class="nav-link" href="#menu-toggle" id="menu-toggle">Menu</a>
+                            <a class="nav-link " href="#menu-toggle" id="menu-toggle">Menu
+                            </a>
                         </li>
                     </ul>
                 </nav>

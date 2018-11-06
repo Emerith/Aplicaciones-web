@@ -103,12 +103,13 @@
     $(document).ready(function(){
         $("#save_civ_ok").click(function() {
             $("#save_civ").submit();
-            swal("Registro Exitoso", " ", "success");
+            swal("Registro Exitoso")
         });
         $("#save_civ").validate({
             submitHandler:function(form){
                 $.post("<?php echo URL?>Civicos/crear",$("#save_civ").serialize(),function(res){
                     $('#save_civ').find('input, select, textarea').val('');
+                    window.location.href="<?php echo URL?>Civicos";
                 })
             }
         });
@@ -148,7 +149,7 @@
                 $('#save_civ').find('input, select, textarea').val('');
                 $("#body_table").empty().append(res);
 
-                swal("Actualización completa")
+                swal("Actualización completa", " ", "success");
             })
         });
 

@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mutsorini
- * Date: 06/11/2018
- * Time: 10:26 PM
- */
+
 
 namespace AppData\Model;
 
 
-class DeportivosClient
+class Proximamente
 {
 
     private $tabla = "eventos";
@@ -32,17 +27,16 @@ class DeportivosClient
 
     function getAll()
     {
-        $sql = "select * from eventos where id_categoria='232'";
+        $sql = "select * from eventos ORDER BY fecha ";
         $datos = $this->conexion->QueryResultado($sql);
         return $datos;
     }
 
-    function getAllDeportivos()
+    function getAllInicio()
     {
         $sql = "SELECT eventos.Nombre, eventos.descripcion, eventos.lugar, 				
                                 eventos.fecha, eventos.Fecha_fin,eventos.Horario
-                                FROM eventos
-                                WHERE eventos.id_categoria='232' ";
+                                FROM eventos ORDER BY fecha ";
         $datos = $this->conexion->QueryResultado($sql);
         return $datos;
     }

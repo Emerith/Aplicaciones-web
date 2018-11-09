@@ -48,59 +48,22 @@
             </div>
 
             <div class="row">
-
+                <?php
+                $datos=$datos[0];
+                $url=URL;
+                while($row=mysqli_fetch_array($datos)) { ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<?php echo URL?>Public/imagenes/spartan.jpg" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/300x160" alt=""></a>
                         <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Spartan Race</a>
-                            </h4>
-                            <h5>6 Octubre</h5>
-                            <p class="card-text">Localización: Monte Alto</p>
+                            <h4 class="card-title"><?php echo $row['Nombre'] ?></h4>
+                            <h5>De: <?php echo $row['fecha']?></h5>
+                            <h5>A: <?php echo $row['fecha']?></h5>
+                            <p class="card-text">Lugar: <?php echo $row['lugar']?></p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<?php echo URL?>Public/imagenes/trail.png" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Trail Valle 12 k</a>
-                            </h4>
-                            <h5>10 Octubre</h5>
-                            <p class="card-text">Categoría: Deportes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<?php echo URL?>Public/imagenes/por.png" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Copa Porsche San Gaspar</a>
-                            </h4>
-                            <h5>6 Octubre</h5>
-                            <p class="card-text">Categoría:Deportes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="<?php echo URL?>Public/imagenes/almas.png" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">XV Festival de las Almas</a>
-                            </h4>
-                            <h5>27 Octubre</h5>
-                            <p class="card-text">Evento cultural</p>
-                        </div>
-                    </div>
-                </div>
-
+                <?php } ?>
 
             </div>
 

@@ -1,49 +1,22 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JAZMIN
- * Date: 10/05/2018
- * Time: 01:12 PM
- */
 
 namespace AppData\Controller;
 
 
 class inicioController
 {
-    public function index()
-    {
-    }
-    public function Habitaciones()
-    {
-        
-    }
-    public function Asignar_Productos()
-    {
+    private $eventos;
 
-    }
-    public function Check_in()
-    {
+public function __construct()
+{
+    $this->eventos= new \AppData\Model\InicioClient();
+}
 
-    }
-    public function Check_out()
-    {
+public function index()
+{
+    $datos1=$this->eventos->getAll();
+    $datos[0]=$datos1;
+    return $datos;
+}
 
-    }
-    public function Asignar_Servicios()
-    {
-
-    }
-    public function Lavanderia()
-    {
-
-    }
-    public function Servicios()
-    {
-
-    }
-    public function Admin_Almacen()
-    {
-
-    }
 }

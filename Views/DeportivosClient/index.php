@@ -22,8 +22,8 @@
        <h3><?php echo $row['Nombre'] ?></h3>
        <p><?php echo $row['descripcion']?></p>
        <p>Lugar: <?php echo $row['lugar']?></p>
-       <p>Fecha: <?php echo $row['fecha']?></p>
-       <p>Fecha de fin: <?php echo $row['Fecha_fin']?></p>
+       <p>De: <?php echo $row['fecha']?></p>
+       <p>A: <?php echo $row['Fecha_fin']?></p>
        <p>Horario: <?php echo $row['Horario']?></p>
  </div>
     </div>

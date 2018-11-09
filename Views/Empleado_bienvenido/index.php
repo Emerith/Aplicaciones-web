@@ -45,23 +45,23 @@
             <div class="modal-body">
                 <form action="" id="save_emp">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Nombre</label>
+                        <label for="Nombre" class="col-form-label">Nombre</label>
                         <input type="text" class="form-control" id='Nombre' name="Nombre">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Apellido Paterno</label>
+                        <label for="Apellido_patern" class="col-form-label">Apellido Paterno</label>
                         <input type="text" class="form-control" id='Apellido_patern' name="Apellido_patern">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Apellido Materno</label>
+                        <label for="Apellido_matern" class="col-form-label">Apellido Materno</label>
                         <input type="text" class="form-control" id='Apellido_matern' name="Apellido_matern">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Correo</label>
+                        <label for="email" class="col-form-label">Correo</label>
                         <input type="email" class="form-control" id='email' name="email">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Contaseña</label>
+                        <label for="pass" class="col-form-label">Contaseña</label>
                         <input type="password" class="form-control" id='pass' name="pass">
                     </div>
                 </form>
@@ -102,6 +102,7 @@
             swal("Registro Exitoso")
 
         });
+
         $("#save_emp").validate({
             submitHandler:function(form){
                 $.post("<?php echo URL?>Empleado_bienvenido/crear",$("#save_emp").serialize(),function(res){

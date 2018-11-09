@@ -5,7 +5,6 @@
         <div class="col-lg-3">
 
             <h1 class="my-4" href="<?php echo URL?>login">Eventos
-                <a href="<?php echo URL?>login">.</a>
             </h1>
             <div class="list-group">
                 <a href="<?php echo URL?>CivicosClient"  class="list-group-item text-dark">Cívicos</a>
@@ -58,7 +57,7 @@
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $row['Nombre'] ?></h4>
                             <h5>De: <?php echo $row['fecha']?></h5>
-                            <h5>A: <?php echo $row['fecha']?></h5>
+                            <h5>A: <?php echo $row['Fecha_fin']?></h5>
                             <p class="card-text">Lugar: <?php echo $row['lugar']?></p>
                         </div>
                     </div>

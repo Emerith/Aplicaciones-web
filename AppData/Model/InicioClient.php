@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mutsorini
- * Date: 08/11/2018
- * Time: 11:06 PM
- */
+
 
 namespace AppData\Model;
 
@@ -32,7 +27,9 @@ class InicioClient
 
     function getAll()
     {
-        $sql = "select * from eventos ORDER BY Nombre";
+        $sql = "select Nombre, descripcion, lugar, 				
+                                date_format(fecha,'%d-%m-%Y')AS fecha,date_format(Fecha_fin,'%d-%m-%Y') As Fecha_fin, Horario
+                                FROM eventos ORDER BY Nombre";
         $datos = $this->conexion->QueryResultado($sql);
         return $datos;
     }

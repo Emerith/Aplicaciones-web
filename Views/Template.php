@@ -125,6 +125,7 @@ class Template
                 <p class="m-0 text-left text-white">Dirección: Km 30 de la Carretera Federal Monumento - Valle de Bravo, Ejido de San Antonio de la Laguna, Valle de Bravo </p>
                 <p class="m-0 text-left text-white">Tel: 01 726 266 50 77</p>
                 <p class="m-0 text-left text-white">E-mail: direcciontesvalle@gmail.com</p>
+                <a class="nav-link" href="<?php echo URL?>login">.</a>
             </div>
         </footer>
         </body>

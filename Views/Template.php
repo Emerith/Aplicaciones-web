@@ -29,6 +29,8 @@ class Template
             <script type="text/javascript" src="<?php echo URL?>Public/js/bootstrap.js"></script>
             <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
             <script type="text/javascript" src="<?php echo URL?>Public/js/sweetalert.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL?>Public/js/uifilter.js"></script>
+            <script type="text/javascript" src="<?php echo URL?>Public/js/highcharts.js"></script>
 
         </head>
 

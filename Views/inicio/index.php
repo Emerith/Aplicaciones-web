@@ -53,7 +53,7 @@
                 while($row=mysqli_fetch_array($datos)) { ?>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/300x160" alt=""></a>
+                        <a><img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $row['Nombre'] ?></h4>
                             <h5>De: <?php echo $row['fecha']?></h5>

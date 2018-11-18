@@ -61,4 +61,18 @@ class Empleado_bienvenidoController
             return $datos;
         }
     }
+
+    public function print_pdf()
+    {
+        $datos=$this->persona->pdf();
+        return $datos;
+    }
+
+
+    public function graficar()
+    {
+        $datos=$this->persona->graficar();
+        return $datos;
+
+    }
 }

@@ -5,7 +5,13 @@
     </h1>
     <h3>Control de Empleados</h3>
     <div class="row">
-        <button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#agregar">+</button>
+
+        <div class="btn-group">
+            <button class="btn btn-primary btn-circle" data-toggle="modal" data-target="#agregar">+</button>
+            <a href="<?php echo URL?>Empleado_bienvenido/print_pdf" target="_blank" class="btn btn-primary btn-circle">PDF</a>
+            <a href="#!" id="graficar_habitaciones" class="btn btn-primary btn-circle">Gráfica</a>
+        </div>
+
         <div class="col-lg-12">
             <br>
         </div>
@@ -95,6 +101,28 @@
     </div>
 </div>
 
+
+<div class="modal" tabindex="-1" role="dialog" id="modal_grafica">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Gráfica de eventos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <script type="text/javascript">
     $(document).ready(function(){
         $("#save_emp_ok").click(function() {
@@ -147,6 +175,15 @@
                 $("#body_table").empty().append(res);
                 swal("Actualización completa", " ", "success");
             })
+        });
+
+
+        $("#graficar_habitaciones").click(function(){
+            $.get("<?php echo URL?>Empleado_bienvenido/graficar",function(res){
+                $("#modal_grafica .modal-content p").empty().append(res);
+                $("#modal_grafica").modal('show');
+
+            });
         });
 
     });

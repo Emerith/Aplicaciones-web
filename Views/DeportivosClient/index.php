@@ -3,8 +3,6 @@
     <!-- Page Heading -->
     <h1 class="my-4">Deportivos
     </h1>
-
-
         <?php
         $datos=$datos[0];
         $url=URL;

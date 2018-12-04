@@ -14,7 +14,6 @@
 
         </div>
 
-
         <div class="col-lg-9">
 
             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -46,7 +45,7 @@
                 </a>
             </div>
 
-            <div class="row">
+            <div class="row" id="tabla_content">
                 <?php
                 $datos=$datos[0];
                 $url=URL;

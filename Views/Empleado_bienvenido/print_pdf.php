@@ -1,6 +1,7 @@
 <?php
 
 $pdf = new \AppData\Config\libs\fpdf\FPDF();
+
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',16);
 $pdf->Cell(190,10,'Lista de eventos',0,0,'C');
@@ -31,3 +32,4 @@ while($row=mysqli_fetch_row($datos))
     $pdf->Cell(20,10,utf8_decode($row[6]),1,0,'C');
 }
 $pdf->Output();
+

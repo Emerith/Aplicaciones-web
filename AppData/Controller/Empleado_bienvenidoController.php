@@ -27,9 +27,14 @@ class Empleado_bienvenidoController
             $this->persona->set('Apellido_matern',$_POST["Apellido_matern"]);
             $this->persona->set('email',$_POST["email"]);
             $this->persona->set('pass',$_POST["pass"]);
-            $this->persona->add();
-            $datos1=$this->persona->getAll();
-            $datos[0]=$datos1;
+
+            $datos[1]=false;
+            if(mysqli_num_rows($this->persona->verify())==0) {
+
+                $this->persona->add();
+                $datos[1]=true;
+            }
+            $datos[0]=$this->persona->getAll();
             return $datos;
         }
     }

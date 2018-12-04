@@ -18,6 +18,7 @@
                     <th scope="col">Fecha inicio</th>
                     <th scope="col">Fecha fin</th>
                     <th scope="col">Horario</th>
+                    <th scope="col">Registro</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
@@ -44,37 +45,62 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="" id="save_civ">
+                <form class="needs-validation" action="" id="save_civ" novalidate>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Nombre</label>
-                        <input type="text" class="form-control" id='Nombre' name="Nombre">
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" required>
+                        <div class="invalid-feedback">
+                            Ingresa un nombre
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <label for="descripcion">Descripción</label>
-                        <textarea class="form-control" rows="3" id="descripcion" name="descripcion"></textarea>
+                        <label for="Nombre">Descipción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="2" required></textarea>
+                        <div class="invalid-feedback">
+                            Ingresa una descripción
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Lugar</label>
-                        <input type="text" class="form-control" id='lugar' name="lugar">
+                        <label for="lugar">Lugar</label>
+                        <input type="text" class="form-control" id="lugar" name="lugar" required>
+                        <div class="invalid-feedback">
+                            Ingresa un lugar
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Fecha inicio</label>
-                        <input type="date" class="form-control" id='fecha' name="fecha">
+
+                    <div class="form-row">
+
+                        <div class="col-md-4 mb-3">
+                            <label for="fecha">Fecha de inicio</label>
+                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            <div class="invalid-feedback">
+                                Fecha de inicio
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="Fecha_fin">Fecha de termino</label>
+                            <input type="date" class="form-control" id="Fecha_fin" name="Fecha_fin" required>
+                            <div class="invalid-feedback">
+                                Fecha de termino
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="Horario">Horario</label>
+                            <input type="time" class="form-control" id="Horario" name="Horario" required>
+                            <div class="invalid-feedback">
+                                Ingrese una hora
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Fecha fin</label>
-                        <input type="date" class="form-control" id='Fecha_fin' name="Fecha_fin">
+                    <div class="modal-footer">
+                        <button class="btn btn-success" type="submit" href="#!" id="save_civ_ok">Registrar</button>
+                        <button class="btn btn-success" type="submit" href="#!" id="update_civ_ok" data-dismiss="modal">Actualizar</button>
+                        <script type="text/javascript">$("#update_civ_ok").hide();</script>
                     </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Hora</label>
-                        <input type="time" class="form-control" id='Horario' name="Horario">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success" href="#!" id="save_civ_ok" data-dismiss="modal">Registrar</button>
-                <button type="button" class="btn btn-success" href="#!" id="update_civ_ok" data-dismiss="modal">Actualizar</button>
-                <script type="text/javascript">$("#update_civ_ok").hide();</script>
             </div>
         </div>
     </div>
@@ -100,58 +126,68 @@
 
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("#save_civ_ok").click(function() {
-            $("#save_civ").submit();
-            swal("Registro Exitoso")
-        });
-        $("#save_civ").validate({
-            submitHandler:function(form){
-                $.post("<?php echo URL?>Civicos/crear",$("#save_civ").serialize(),function(res){
-                    $('#save_civ').find('input, select, textarea').val('');
-                    window.location.href="<?php echo URL?>Civicos";
-                })
-            }
-        });
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
 
-        $("#body_table").on("click","a.btn_eliminar",function(){
-            var id=$(this).data("id");
-            var url='<?php echo URL?>Civicos/eliminar/'+id;
-            $("#eliminar_ok").attr("url",url);
-            $("#modal_eliminar").modal('show');
-        });
-        $("#eliminar_ok").click(function(){
-            $.get($(this).attr("url"),function(res){
-                $("#body_table").empty().append(res);
+                $("#save_civ").validate({
+                    submitHandler:function(form){
+                        $.post("<?php echo URL?>Civicos/crear",$("#save_civ").serialize(),function(res){
+                            $('#save_civ').find('input, select, textarea').val('');
+                            swal("Registro Exitoso");
+                            window.location.href="<?php echo URL?>Civicos";
+                        })
+                    }
+                });
+
+                $("#body_table").on("click","a.btn_eliminar",function(){
+                    var id=$(this).data("id");
+                    var url='<?php echo URL?>Civicos/eliminar/'+id;
+                    $("#eliminar_ok").attr("url",url);
+                    $("#modal_eliminar").modal('show');
+                });
+                $("#eliminar_ok").click(function(){
+                    $.get($(this).attr("url"),function(res){
+                        $("#body_table").empty().append(res);
+                    });
+                });
+
+                $("#body_table").on("click","a.btn_modificar",function(){
+                    $("#save_civ_ok").hide();
+                    $("#update_civ_ok").show();
+                    var id=$(this).data("id");
+                    $.get("<?php echo URL?>Civicos/modificar/"+id,function(res){
+                        var datos=JSON.parse(res);
+                        $("#update_civ_ok").data("id",datos["id_evento"]);
+                        $("#Nombre").val(datos["Nombre"]);
+                        $("#descripcion").val(datos["descripcion"]);
+                        $("#lugar").val(datos["lugar"]);
+                        $("#fecha").val(datos["fecha"]);
+                        $("#Fecha_fin").val(datos["Fecha_fin"]);
+                        $("#Horario").val(datos["Horario"]);
+
+                        $("#agregar").modal('show');
+                    });
+                });
+                $("#update_civ_ok").click(function(){
+                    var id=$(this).data("id");
+                    $.post("<?php echo URL?>Civicos/actualizar/"+id,$("#save_civ").serialize(),function(res){
+                        $('#save_civ').find('input, select, textarea').val('');
+                        $("#body_table").empty().append(res);
+
+                        swal("Actualización completa", " ", "success");
+                    })
+                });
             });
-        });
-
-        $("#body_table").on("click","a.btn_modificar",function(){
-            $("#save_civ_ok").hide();
-            $("#update_civ_ok").show();
-            var id=$(this).data("id");
-            $.get("<?php echo URL?>Civicos/modificar/"+id,function(res){
-                var datos=JSON.parse(res);
-                $("#update_civ_ok").data("id",datos["id_evento"]);
-                $("#Nombre").val(datos["Nombre"]);
-                $("#descripcion").val(datos["descripcion"]);
-                $("#lugar").val(datos["lugar"]);
-                $("#fecha").val(datos["fecha"]);
-                $("#Fecha_fin").val(datos["Fecha_fin"]);
-                $("#Horario").val(datos["Horario"]);
-
-                $("#agregar").modal('show');
-            });
-        });
-        $("#update_civ_ok").click(function(){
-            var id=$(this).data("id");
-            $.post("<?php echo URL?>Civicos/actualizar/"+id,$("#save_civ").serialize(),function(res){
-                $('#save_civ').find('input, select, textarea').val('');
-                $("#body_table").empty().append(res);
-
-                swal("Actualización completa", " ", "success");
-            })
-        });
-
-    });
+        }, false);
+    })();
 </script>

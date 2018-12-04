@@ -57,4 +57,10 @@ class Culturales
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }
+
+    function verify(){
+        $sql = "select * from {$this->tabla} where  Nombre='{$this->Nombre}' ";
+        $dato=$this->conexion->QueryResultado($sql);
+        return $dato;
+    }
 }

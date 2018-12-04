@@ -32,7 +32,7 @@ class Empleado_Bienvenido
         $this->conexion->QuerySimple($sql);
     }
     function getAll(){
-        $sql="select *from {$this->tabla}";
+        $sql="select *from {$this->tabla} WHERE id_persona > 1";
         $datos=$this->conexion->queryResultado($sql);
         return $datos;
     }
@@ -73,6 +73,12 @@ class Empleado_Bienvenido
               where eventos.id_categoria = categoria.id_categoria
               ORDER BY categoria.id_categoria";
         $dato = $this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+
+    function verify(){
+        $sql = "select * from {$this->tabla} where  email='{$this->email}' ";
+        $dato=$this->conexion->QueryResultado($sql);
         return $dato;
     }
 }

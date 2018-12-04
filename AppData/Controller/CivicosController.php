@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mutsorini
- * Date: 02/11/2018
- * Time: 10:09 PM
- */
 
 namespace AppData\Controller;
 
@@ -33,9 +27,13 @@ class CivicosController
             $this->eventos->set('Fecha_fin',$_POST["Fecha_fin"]);
             $this->eventos->set('Horario',$_POST["Horario"]);
 
-            $this->eventos->add();
-            $datos1=$this->eventos->getAll();
-            $datos[0]=$datos1;
+            $datos[1]=false;
+            if(mysqli_num_rows($this->eventos->verify())==0) {
+
+                $this->eventos->add();
+                $datos[1]=true;
+            }
+            $datos[0]=$this->eventos->getAll();
             return $datos;
         }
     }

@@ -14,7 +14,6 @@ class Culturales
     private  $fecha;
     private  $Fecha_fin;
     private  $Horario;
-    private  $id_categoria;
 
     function __construct()
     {

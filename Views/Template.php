@@ -57,7 +57,7 @@ class Template
                                     <a class="nav-link" href="<?php echo URL ?>Proximamente">Próximamente</a>
                                 </li>
                                 <li class="nav-item">
-                                    <input class="form-control" type="search" placeholder="Buscar" id="buscar">
+                                    <a href="<?php echo URL?>login" class="brand-logo"><img src="Public\imagenes\logo.png" width="65px" height="50px"/></a>
                                 </li>
                             </ul>
                         </div>
@@ -131,7 +131,6 @@ class Template
                     Ejido de San Antonio de la Laguna, Valle de Bravo </p>
                 <p class="m-0 text-left text-white">Tel: 01 726 266 50 77</p>
                 <p class="m-0 text-left text-white">E-mail: direcciontesvalle@gmail.com</p>
-                <a class="nav-link" href="<?php echo URL ?>login">.</a>
             </div>
         </footer>
         </body>

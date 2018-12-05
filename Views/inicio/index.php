@@ -6,12 +6,16 @@
 
             <h1 class="my-4" href="<?php echo URL?>login">Eventos
             </h1>
-            <div class="list-group">
-                <a href="<?php echo URL?>CivicosClient"  class="list-group-item text-dark">Cívicos</a>
-                <a href="<?php echo URL?>DeportivosClient" class="list-group-item text-dark">Depotivos</a>
-                <a href="<?php echo URL?>CulturalesClient" class="list-group-item text-dark">Culturales</a>
+
+            <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+                <input class="form-control" type="text" placeholder="Buscar" id="buscar">
             </div>
 
+            <div class="list-group">
+                <a href="<?php echo URL?>CivicosClient"  class="list-group-item text-dark">Cívicos</a>
+                <a href="<?php echo URL?>DeportivosClient" class="list-group-item text-dark">Deportivos</a>
+                <a href="<?php echo URL?>CulturalesClient" class="list-group-item text-dark">Culturales</a>
+            </div>
         </div>
 
         <div class="col-lg-9">
@@ -45,7 +49,7 @@
                 </a>
             </div>
 
-            <div class="row" id="tabla_content">
+            <div class="row" id="tabla">
                 <?php
                 $datos=$datos[0];
                 $url=URL;
@@ -71,3 +75,15 @@
     </div>
 
 </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#buscar").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tabla ").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>

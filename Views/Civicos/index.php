@@ -74,7 +74,7 @@
 
                         <div class="col-md-4 mb-3">
                             <label for="fecha">Fecha de inicio</label>
-                            <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            <input type="date" class="form-control" id="fecha" name="fecha" min="<?php echo date("Y-m-d");?>" max="2018-12-31" required>
                             <div class="invalid-feedback">
                                 Fecha de inicio
                             </div>
@@ -82,7 +82,7 @@
 
                         <div class="col-md-4 mb-3">
                             <label for="Fecha_fin">Fecha de termino</label>
-                            <input type="date" class="form-control" id="Fecha_fin" name="Fecha_fin" required>
+                            <input type="date" class="form-control" id="Fecha_fin" name="Fecha_fin" min="<?php echo date("Y-m-d");?>" max="2018-12-31" required>
                             <div class="invalid-feedback">
                                 Fecha de termino
                             </div>

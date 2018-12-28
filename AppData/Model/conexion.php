@@ -1,13 +1,10 @@
 <?php
-
 namespace AppData\Model;
-
-
 class conexion
 {
 
-    private $datos=array("server"=>"localhost","user"=>"mutso","password"=>"", "base"=>"eventos");
-
+    private $datos=array("server"=>"localhost","user"=>"root","password"=>"", "base"=>"eventos");
+    public $stm;
 
 
     private $conexion;
@@ -22,6 +19,23 @@ class conexion
     {
         $this->conexion->query($sql) or die (mysqli_error($this->conexion));
     }
+    public function proc($a,$b,$c,$d,$e,$f,$g,$h)
+    {
+        $sql="insert into eventos (Nombre,descripcion,id_categoria,lugar,fecha,fecha_fin,horario,img) values (?,?,?,?,?,?,?,?)";
+        $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
+        $stm->bind_param('ssssssss',$a,$b,$c,$d,$e,$f,$g,$h);
+        $stm->execute();
+    }
+
+    public function proc2($a,$b,$c,$d,$e,$f,$g,$h)
+    {
+        $sql="update eventos set Nombre=?, descripcion=?,lugar=?, fecha=?, Fecha_fin=?, Horario=? ,img=? where id_evento=?";
+        $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
+        $stm->bind_param('ssssssss',$a,$b,$c,$d,$e,$f,$g,$h);
+        $stm->execute();
+
+    }
+
     public function QueryResultado($sql)
     {
         $datos=$this->conexion->query($sql) or die (mysqli_error($this->conexion));

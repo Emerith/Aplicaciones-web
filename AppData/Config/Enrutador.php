@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JAZMIN
- * Date: 11/05/2018
- * Time: 07:32 AM
- */
 
 namespace AppData\Config;
 
@@ -30,7 +24,7 @@ class Enrutador
             }
         }
 
-        if ($request->getMetodo() != "modificar") {
+        if ($request->getMetodo() != "modifica") {
             $ruta = ROOT . "Views" . DS . $request->getControlador() . DS . $request->getMetodo() . ".php";
 
             if (is_readable($ruta))

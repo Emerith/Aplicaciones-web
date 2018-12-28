@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Luis
- * Date: 12/06/2018
- * Time: 01:40 PM
- */
-
 namespace AppData\Controller;
-
-
 class loginController
 {
     private $login;
@@ -17,10 +8,11 @@ class loginController
         {
             $this->login= new \AppData\Model\Login();
         }
-
     public function index()
         {
-            //session_destroy();
+            $datos1=$this->login->getAll();
+            $datos[0]=$datos1;
+            return $datos;   
         }
     public function verify()
         {
@@ -28,12 +20,13 @@ class loginController
 
             if(isset($_POST)) {
                 $this->login->set("email", $_POST["email"]);
-                $this->login->set("pass", $_POST["password"]);
-                $datos = $this->login->verify();
+                $this->login->set("pass", $_POST["pass"]);
+                $datos = $this->login->comprobar();
                 if (mysqli_num_rows($datos) > 0) {
                     $datos=mysqli_fetch_assoc($datos);
-                    $_SESSION["username"]=$datos["email"];
+                    $_SESSION["email"]=$datos["email"];
                     header("Location:" . URL . "Empleado_bienvenido");
+                    echo($_SESSION["nombre"]);
 
                 }
                 else {
@@ -42,6 +35,8 @@ class loginController
                 }
             }
         }
+
+
     public function logout()
         {
             session_destroy();

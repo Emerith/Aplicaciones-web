@@ -1,14 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Luis
- * Date: 12/06/2018
- * Time: 01:44 PM
- */
-
 namespace AppData\Model;
-
-
 class Login
 {
     private $tabla="persona";
@@ -27,12 +18,18 @@ class Login
     {
         return $this->$atributo;
     }
-
-    public function verify()
+    function getAll()
+    {
+        $sql="SELECT * from persona";
+        $datos=$this->conexion->QueryResultado($sql);
+        return $datos;
+    }
+    public function comprobar()
     {
         $sql="SELECT * FROM {$this->tabla} where email='{$this->email}' and pass='{$this->pass}'";
-        //print_r($sql);
         $dato=$this->conexion->QueryResultado($sql);
         return $dato;
     }
+
+
 }

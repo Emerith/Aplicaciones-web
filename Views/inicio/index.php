@@ -6,15 +6,10 @@
 
             <h1 class="my-4" href="<?php echo URL?>login">Eventos
             </h1>
-
-            <div class="md-form active-pink active-pink-2 mb-3 mt-0">
-                <input class="form-control" type="text" placeholder="Buscar" id="buscar">
-            </div>
-
             <div class="list-group">
-                <a href="<?php echo URL?>CivicosClient"  class="list-group-item text-dark">Cívicos</a>
+                <a href="<?php echo URL?>CulturalesClient"  class="list-group-item text-dark">Culturales</a>
+                <a href="<?php echo URL?>CivicosClient" class="list-group-item text-dark">Civicos</a>
                 <a href="<?php echo URL?>DeportivosClient" class="list-group-item text-dark">Deportivos</a>
-                <a href="<?php echo URL?>CulturalesClient" class="list-group-item text-dark">Culturales</a>
             </div>
         </div>
 
@@ -30,13 +25,13 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="<?php echo URL?>Public/imagenes/valle1.png">
+                        <img class="d-block img-fluid" src="<?php echo URL?>Public/img/valle1.png">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="<?php echo URL?>Public/imagenes/valle2.png" >
+                        <img class="d-block img-fluid" src="<?php echo URL?>Public/img/valle2.png" >
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="<?php echo URL?>Public/imagenes/valle3.png">
+                        <img class="d-block img-fluid" src="<?php echo URL?>Public/img/valle3.png">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -49,41 +44,29 @@
                 </a>
             </div>
 
-            <div class="row" id="tabla">
+            <table id="tabla">
+            <div class="row">
                 <?php
                 $datos=$datos[0];
                 $url=URL;
                 while($row=mysqli_fetch_array($datos)) { ?>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a><img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title"><?php echo $row['Nombre'] ?></h4>
-                            <h5>De: <?php echo $row['fecha']?></h5>
-                            <h5>A: <?php echo $row['Fecha_fin']?></h5>
-                            <p class="card-text">Lugar: <?php echo $row['lugar']?></p>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a><img class="img-responsive center-block" width="253px" height="135px" src='data:image/jpg; base64, <?php echo base64_encode($row['img']) ?>'></a>
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $row['Nombre'] ?></h4>
+                                <h5>De: <?php echo $row['fecha']?></h5>
+                                <h5>A: <?php echo $row['Fecha_fin']?></h5>
+                                <p class="card-text">Lugar: <?php echo $row['lugar']?></p>
+                                <p class="card-text">Hora: <?php echo $row['Horario']?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
-
             </div>
-
-
+            </table>
         </div
-
     </div>
-
 </div>
 
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#buscar").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#tabla ").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>

@@ -18,9 +18,6 @@
                     <a class="nav-link"></a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control" type="text" placeholder="Buscar" id="buscar">
-            </form>
         </div>
     </nav>
 </div>
@@ -35,20 +32,18 @@
 
             <div class="row">
                 <div class="col-md-7">
-                 <a href="#">
-                    <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-                 </a>
+                    <a><img class="img-responsive center-block" width="640px" height="270px" src='data:image/jpg; base64, <?php echo base64_encode($row['img']) ?>'></a>
+                </div>
 
-            </div>
 
-        <div class="col-md-5">
-               <h3><?php echo $row['Nombre'] ?></h3>
-               <p><?php echo $row['descripcion']?></p>
-               <p>Lugar: <?php echo $row['lugar']?></p>
-               <p>De: <?php echo $row['fecha']?></p>
-               <p>A: <?php echo $row['Fecha_fin']?></p>
-               <p>Horario: <?php echo $row['Horario']?></p>
-         </div>
+                    <div class="col-md-5">
+                           <h3><?php echo $row['Nombre'] ?></h3>
+                           <p><?php echo $row['descripcion']?></p>
+                           <p>Lugar: <?php echo $row['lugar']?></p>
+                           <p>De: <?php echo $row['fecha']?></p>
+                           <p>A: <?php echo $row['Fecha_fin']?></p>
+                           <p>Horario: <?php echo $row['Horario']?></p>
+                     </div>
 
             </div>
             <br>
@@ -56,14 +51,3 @@
 
 
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#buscar").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#tabla ").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-    });
-</script>

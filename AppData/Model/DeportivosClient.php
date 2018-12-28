@@ -33,20 +33,9 @@ class DeportivosClient
     function getAll()
     {
         $sql = "select Nombre, descripcion, lugar, 				
-                                date_format(fecha,'%d-%m-%Y')As fecha, date_format(Fecha_fin,'%d-%m-%Y') AS Fecha_fin, Horario
+                                date_format(fecha,'%d-%m-%Y')As fecha, date_format(Fecha_fin,'%d-%m-%Y') AS Fecha_fin, Horario,img
                                 from eventos where id_categoria='232' ORDER BY fecha DESC ";
         $datos = $this->conexion->QueryResultado($sql);
         return $datos;
     }
-
-    function getAllDeportivos()
-    {
-        $sql = "SELECT Nombre, descripcion, lugar, 				
-                                fecha, Fecha_fin, Horario
-                                from eventos where id_categoria='232' ORDER BY fecha";
-        $datos = $this->conexion->QueryResultado($sql);
-        return $datos;
-    }
-
-
 }

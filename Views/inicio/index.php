@@ -7,8 +7,8 @@
             <h1 class="my-4" href="<?php echo URL?>login">Eventos
             </h1>
             <div class="list-group">
-                <a href="<?php echo URL?>CulturalesClient"  class="list-group-item text-dark">Culturales</a>
-                <a href="<?php echo URL?>CivicosClient" class="list-group-item text-dark">Civicos</a>
+                <a href="<?php echo URL?>CivicosClient"  class="list-group-item text-dark">Civicos</a>
+                <a href="<?php echo URL?>CulturalesClient" class="list-group-item text-dark">Culturales</a>
                 <a href="<?php echo URL?>DeportivosClient" class="list-group-item text-dark">Deportivos</a>
             </div>
         </div>

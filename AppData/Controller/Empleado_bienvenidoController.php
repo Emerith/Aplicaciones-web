@@ -13,14 +13,15 @@ class Empleado_bienvenidoController
     }
     public function index()
     {
-
+        $datos1=$this->persona->getAll();
+        $datos[0]=$datos1;
+        return $datos;
     }
     public function print_pdf()
     {
         $datos=$this->persona->pdf();
         return $datos;
     }
-
 
     public function graficar()
     {

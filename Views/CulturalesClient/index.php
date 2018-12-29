@@ -1,23 +1,24 @@
-<br>
-
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <h1>Culturales</h1>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"></a>
+                </li>
+                <li class="nav-item ">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"></a>
                 </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <h6>Número de visitas:
+                    <?php
+                    echo contador2();
+                    ?>
+                </h6>
+            </form>
         </div>
     </nav>
 </div>
@@ -46,6 +47,28 @@
         </div>
         <br>
     <?php } ?>
-
-
 </div>
+<br>
+<br>
+<br>
+
+<?php
+function contador2()
+{
+    $archivo = "Views/CulturalesClient/contador2.txt";
+    $f = fopen($archivo, "r");
+    if($f)
+    {
+        $contador2 = fread($f, filesize($archivo));
+        $contador2 = $contador2 + 1;
+        fclose($f);
+    }
+    $f = fopen($archivo, "w+");
+    if($f)
+    {
+        fwrite($f, $contador2);
+        fclose($f);
+    }
+    return $contador2;
+}
+?>

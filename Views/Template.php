@@ -80,11 +80,11 @@ class Template
                         </li>
 
                         <li>
-                            <a href="<?php echo URL ?>Culturales">Culturales</a>
+                            <a href="<?php echo URL ?>Civicos">Civicos</a>
                         </li>
 
                         <li>
-                            <a href="<?php echo URL ?>Civicos">Civicos</a>
+                            <a href="<?php echo URL ?>Culturales">Culturales</a>
                         </li>
 
                         <li>

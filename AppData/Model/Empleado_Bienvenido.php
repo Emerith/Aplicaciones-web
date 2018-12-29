@@ -20,6 +20,13 @@ class Empleado_Bienvenido
         return $this->$atributo;
     }
 
+    function getAll()
+    {
+        $sql="SELECT eventos.Nombre,categoria.descripcion from eventos,categoria WHERE eventos.id_categoria=categoria.id_categoria ORDER BY categoria.descripcion ";
+        $dato = $this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+
     function graficar()
     {
         $sql="SELECT categoria.descripcion,
